@@ -35,29 +35,20 @@ function initLetters() {
   });
 }
 initLetters();
-
 function RandomWordInPlace() {
   arrayOfTheWord.forEach((value) => {
-    console.log(value);
     let span = document.createElement("span");
-    //   if (value === " ") {
-    //     span.className = "with-space";
-    //   }
     letterGuess.appendChild(span);
   });
 }
 RandomWordInPlace();
-
 let arrayone = document.querySelectorAll(".letters .letter-box");
 let spanShow = document.querySelectorAll(".letters-guss span");
 let wrongAttemps = 0;
 let theDraw = document.querySelector(".hangman-draw");
-
 letterGuess.classList.add("finished");
-
 document.addEventListener("click", (e) => {
   let theStatus = false;
-
   if (e.target.classList.contains("letter-box")) {
     e.target.classList.add("clicked");
     let pressedValue = e.target.innerHTML.toLowerCase();
